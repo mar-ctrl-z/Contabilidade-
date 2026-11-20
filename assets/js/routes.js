@@ -4,8 +4,10 @@ const DIVULGA_ROUTES = {
   store: 'vitrine.html',
   chat: 'chat.html',
   clients: 'clientes.html',
+  crm: 'crm.html',
   agenda: 'agenda.html',
-  reports: 'relatorios.html'
+  reports: 'relatorios.html',
+  campaigns: 'campanhas.html'
 };
 
 window.DivulgaRoutes = DIVULGA_ROUTES;

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM de Clientes — Divulga+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/crm.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-wrap">
+        <a class="brand" href="/index.html">Divulga+</a>
+        <span>PAINEL DE<br>CONTROLE</span>
+      </div>
+      <nav class="main-tabs" aria-label="Navegação do painel">
+        <a class="active" href="/pages/painel/crm.html">CRM Clientes</a>
+        <a href="/pages/painel/agenda.html">Agenda de Posts</a>
+        <a href="/pages/painel/relatorios.html">Relatórios Detalhados</a>
+        <a href="/pages/catalog/catalog.html">Meu catálogo</a>
+        <a href="/pages/painel/chat.html">Agente de IA</a>
+      </nav>
+      <div class="top-actions">
+        <button class="new-client" id="new-client-btn">＋ Novo Cliente</button>
+        <button class="bell" aria-label="Notificações">●</button>
+        <span class="avatar">m</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="crm-dashboard">
+    <section class="heading-row">
+      <div class="heading-copy">
+        <p class="kicker purple">▦ CRM DE CLIENTES</p>
+        <h1>Gerenciamento de Clientes</h1>
+        <p class="subtitle">Cadastre e organize clientes por cidade, ticket médio e frequência de compra.</p>
+      </div>
+      <div class="heading-actions">
+        <button class="btn-secondary">📥 Exportar Dados</button>
+        <button class="btn-primary" id="import-clients-btn">＋ Importar Clientes</button>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Resumo">
+      <article class="stat coral">
+        <header>
+          <span>CLIENTES ATIVOS</span>
+          <b>👥</b>
+        </header>
+        <strong>342</strong>
+        <p>Com compra nos últimos 30 dias</p>
+      </article>
+      <article class="stat lime">
+        <header>
+          <span>TICKET MÉDIO</span>
+          <b>R$</b>
+        </header>
+        <strong>R$ 127</strong>
+        <p>+18% vs. mês anterior</p>
+      </article>
+      <article class="stat mint">
+        <header>
+          <span>FREQUÊNCIA MÉDIA</span>
+          <b>📅</b>
+        </header>
+        <strong>2.4x/mês</strong>
+        <p>Compras por cliente ativo</p>
+      </article>
+      <article class="stat purple">
+        <header>
+          <span>CLIENTES INATIVOS</span>
+          <b>↻</b>
+        </header>
+        <strong>127</strong>
+        <p>Sem compra há 60+ dias</p>
+      </article>
+    </section>
+
+    <section class="filters-section">
+      <div class="filter-group">
+        <label for="filter-city">Cidade</label>
+        <select id="filter-city">
+          <option value="">Todas as cidades</option>
+          <option value="sao-paulo">São Paulo, SP</option>
+          <option value="curitiba">Curitiba, PR</option>
+          <option value="rio-janeiro">Rio de Janeiro, RJ</option>
+          <option value="belo-horizonte">Belo Horizonte, MG</option>
+          <option value="florianopolis">Florianópolis, SC</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-frequency">Frequência</label>
+        <select id="filter-frequency">
+          <option value="">Todas</option>
+          <option value="high">Alta (4+ compras/mês)</option>
+          <option value="medium">Média (2-3 compras/mês)</option>
+          <option value="low">Baixa (1 compra/mês)</option>
+          <option value="inactive">Inativo (60+ dias)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-ticket">Ticket Médio</label>
+        <select id="filter-ticket">
+          <option value="">Todos</option>
+          <option value="premium">Premium (R$ 200+)</option>
+          <option value="medium">Médio (R$ 100-200)</option>
+          <option value="basic">Básico (até R$ 100)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-status">Status</label>
+        <select id="filter-status">
+          <option value="">Todos</option>
+          <option value="active">Ativo</option>
+          <option value="at-risk">Em risco</option>
+          <option value="inactive">Inativo</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="search-wrapper">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="search" id="client-search" placeholder="Buscar cliente por nome, cidade ou telefone...">
+      </div>
+    </div>
+
+    <section class="clients-grid" id="clients-grid">
+      <article class="client-card" data-city="sao-paulo" data-frequency="high" data-ticket="premium" data-status="active">
+        <div class="client-header">
+          <div class="client-avatar coral">AA</div>
+          <span class="client-status active">Ativo</span>
+        </div>
+        <div class="client-info">
+          <h3>Alto Astral Moda</h3>
+          <div class="client-location">📍 São Paulo, SP</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 245</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change up">+12%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">4.2x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change up">+0.3</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 3.4K</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-lime">✦ Campanha</button>
+        </div>
+      </article>
+
+      <article class="client-card" data-city="curitiba" data-frequency="medium" data-ticket="medium" data-status="active">
+        <div class="client-header">
+          <div class="client-avatar lime">CB</div>
+          <span class="client-status active">Ativo</span>
+        </div>
+        <div class="client-info">
+          <h3>Casa Botânica Design</h3>
+          <div class="client-location">📍 Curitiba, PR</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 178</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change up">+8%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">2.8x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change up">+0.5</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 2.1K</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-lime">✦ Campanha</button>
+        </div>
+      </article>
+
+      <article class="client-card" data-city="belo-horizonte" data-frequency="high" data-ticket="premium" data-status="active">
+        <div class="client-header">
+          <div class="client-avatar purple">CG</div>
+          <span class="client-status active">Ativo</span>
+        </div>
+        <div class="client-info">
+          <h3>Café &amp; Grão Torrefação</h3>
+          <div class="client-location">📍 Belo Horizonte, MG</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 312</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change up">+22%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">5.1x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change up">+1.2</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 4.8K</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-lime">✦ Campanha</button>
+        </div>
+      </article>
+
+      <article class="client-card" data-city="rio-janeiro" data-frequency="low" data-ticket="basic" data-status="at-risk">
+        <div class="client-header">
+          <div class="client-avatar blue">SB</div>
+          <span class="client-status at-risk">Em risco</span>
+        </div>
+        <div class="client-info">
+          <h3>Studio Bella Cosméticos</h3>
+          <div class="client-location">📍 Rio de Janeiro, RJ</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 89</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change down">-5%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">0.8x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change down">-0.4</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 680</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-primary" style="background: var(--coral);">↻ Reativar</button>
+        </div>
+      </article>
+
+      <article class="client-card" data-city="florianopolis" data-frequency="high" data-ticket="premium" data-status="active">
+        <div class="client-header">
+          <div class="client-avatar coral">UF</div>
+          <span class="client-status active">Ativo</span>
+        </div>
+        <div class="client-info">
+          <h3>Urban Fit Wear</h3>
+          <div class="client-location">📍 Florianópolis, SC</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 289</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change up">+15%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">4.8x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change up">+0.8</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 5.2K</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-lime">✦ Campanha</button>
+        </div>
+      </article>
+
+      <article class="client-card" data-city="sao-paulo" data-frequency="inactive" data-ticket="medium" data-status="inactive">
+        <div class="client-header">
+          <div class="client-avatar lime">MZ</div>
+          <span class="client-status inactive">Inativo</span>
+        </div>
+        <div class="client-info">
+          <h3>Moda Zen Boutique</h3>
+          <div class="client-location">📍 São Paulo, SP</div>
+        </div>
+        <div class="client-metrics">
+          <div class="metric">
+            <div class="metric-value">R$ 156</div>
+            <div class="metric-label">Ticket Médio</div>
+            <div class="metric-change down">-12%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">0x</div>
+            <div class="metric-label">Freq/mês</div>
+            <div class="metric-change down">Última: 72 dias</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">R$ 1.9K</div>
+            <div class="metric-label">Total Gasto</div>
+          </div>
+        </div>
+        <div class="client-actions">
+          <button class="btn-outline">Ver Perfil</button>
+          <button class="btn-primary" style="background: var(--purple);">↻ Reativar</button>
+        </div>
+      </article>
+    </section>
+
+    <aside class="tip">
+      <div>
+        <span class="tip-icon">✦</span>
+        <div>
+          <strong>Insight da IA</strong>
+          <p>127 clientes inativos podem ser reativados com campanha de cupom. Custo estimado por reativação: R$ 5,80. ROI projetado: 4.1x</p>
+        </div>
+      </div>
+      <button id="create-reactivation-btn">✦ Criar Campanha de Reativação</button>
+    </aside>
+  </main>
+
+  <!-- Modal Novo Cliente -->
+  <div class="modal-overlay" id="client-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Novo Cliente</h2>
+        <button class="modal-close" aria-label="Fechar">×</button>
+      </div>
+      <form id="client-form">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="client-name">Nome / Empresa</label>
+            <input type="text" id="client-name" name="name" placeholder="Ex: Alto Astral Moda" required>
+          </div>
+          <div class="form-group">
+            <label for="client-phone">Telefone / WhatsApp</label>
+            <input type="tel" id="client-phone" name="phone" placeholder="(11) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label for="client-email">E-mail</label>
+            <input type="email" id="client-email" name="email" placeholder="contato@empresa.com">
+          </div>
+          <div class="form-group">
+            <label for="client-city">Cidade</label>
+            <select id="client-city" name="city" required>
+              <option value="">Selecione...</option>
+              <option value="sao-paulo">São Paulo, SP</option>
+              <option value="curitiba">Curitiba, PR</option>
+              <option value="rio-janeiro">Rio de Janeiro, RJ</option>
+              <option value="belo-horizonte">Belo Horizonte, MG</option>
+              <option value="florianopolis">Florianópolis, SC</option>
+              <option value="other">Outra cidade</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="client-segment">Segmento</label>
+            <select id="client-segment" name="segment">
+              <option value="">Selecione...</option>
+              <option value="moda">Moda &amp; Vestuário</option>
+              <option value="gastronomia">Gastronomia</option>
+              <option value="beleza">Beleza &amp; Estética</option>
+              <option value="decoracao">Decoração</option>
+              <option value="servicos">Serviços</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="client-notes">Observações</label>
+            <textarea id="client-notes" name="notes" placeholder="Preferências, histórico, observações importantes..."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary">Cancelar</button>
+          <button type="submit" class="btn-lime">Salvar Cliente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Divulga+</strong>
+    <span>• Gestão inteligente e simplificada</span>
+    <small>© 2026 Divulga+. Todos os direitos reservados.</small>
+  </footer>
+
+  <script src="/assets/js/crm.js"></script>
+</body>
+</html>

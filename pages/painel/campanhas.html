@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanhas Automáticas — Divulga+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/campanhas.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-wrap">
+        <a class="brand" href="/index.html">Divulga+</a>
+        <span>PAINEL DE<br>CONTROLE</span>
+      </div>
+      <nav class="main-tabs" aria-label="Navegação do painel">
+        <a href="/pages/painel/clientes.html">Clientes &amp; Planilhas</a>
+        <a href="/pages/painel/agenda.html">Agenda de Posts</a>
+        <a href="/pages/painel/relatorios.html">Relatórios Detalhados</a>
+        <a href="/pages/catalog/catalog.html">Meu catálogo</a>
+        <a href="/pages/painel/chat.html">Agente de IA</a>
+      </nav>
+      <div class="top-actions">
+        <button class="btn-primary" id="new-campaign-btn">＋ Nova Campanha</button>
+        <button class="bell" aria-label="Notificações">●</button>
+        <span class="avatar">m</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="campaigns-dashboard">
+    <section class="heading-row">
+      <div class="heading-copy">
+        <p class="kicker">🔥 CAMPANHAS AUTOMÁTICAS</p>
+        <h1>Campanhas Inteligentes</h1>
+        <p class="subtitle">A IA identifica produtos de baixo giro e clientes inativos para criar campanhas automáticas.</p>
+      </div>
+      <div class="heading-actions">
+        <button class="btn-secondary">📊 Ver Relatórios</button>
+        <button class="btn-lime">✦ Otimizar com IA</button>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Resumo">
+      <article class="stat coral">
+        <header>
+          <span>CAMPANHAS ATIVAS</span>
+          <b>🔥</b>
+        </header>
+        <strong>8</strong>
+        <p>3 de produto, 5 de reativação</p>
+      </article>
+      <article class="stat lime">
+        <header>
+          <span>PEDIDOS GERADOS</span>
+          <b>🛒</b>
+        </header>
+        <strong>267</strong>
+        <p>R$ 18.450 em faturamento</p>
+      </article>
+      <article class="stat mint">
+        <header>
+          <span>CLIENTES REATIVADOS</span>
+          <b>↻</b>
+        </header>
+        <strong>89</strong>
+        <p>42% de taxa de retorno</p>
+      </article>
+      <article class="stat purple">
+        <header>
+          <span>ESTOQUE LIBERADO</span>
+          <b>📦</b>
+        </header>
+        <strong>34%</strong>
+        <p>Produtos de baixo giro vendidos</p>
+      </article>
+    </section>
+
+    <section class="campaign-types">
+      <article class="campaign-type-card highlighted">
+        <div class="type-header">
+          <div class="type-icon low-stock">📦</div>
+          <span class="type-badge urgent">5 produtos</span>
+        </div>
+        <h3>Produtos de Baixo Giro</h3>
+        <p>Produtos com menos de 3 vendas nos últimos 60 dias. A IA cria ofertas automáticas com desconto progressivo para acelerar a saída.</p>
+        <div class="type-stats">
+          <div class="type-stat">
+            <div class="type-stat-value">5</div>
+            <div class="type-stat-label">Produtos</div>
+          </div>
+          <div class="type-stat">
+            <div class="type-stat-value">42</div>
+            <div class="type-stat-label">Vendas</div>
+          </div>
+          <div class="type-stat">
+            <div class="type-stat-value">R$ 3.2K</div>
+            <div class="type-stat-label">Faturamento</div>
+          </div>
+        </div>
+        <div class="type-action">
+          <button class="btn-coral" id="create-stock-campaign">🔥 Criar Campanha de Estoque</button>
+        </div>
+      </article>
+
+      <article class="campaign-type-card">
+        <div class="type-header">
+          <div class="type-icon inactive">↻</div>
+          <span class="type-badge moderate">127 clientes</span>
+        </div>
+        <h3>Clientes Inativos</h3>
+        <p>Clientes sem compra há mais de 60 dias. A IA segmenta por cidade e ticket médio para enviar ofertas personalizadas via WhatsApp.</p>
+        <div class="type-stats">
+          <div class="type-stat">
+            <div class="type-stat-value">127</div>
+            <div class="type-stat-label">Inativos</div>
+          </div>
+          <div class="type-stat">
+            <div class="type-stat-value">89</div>
+            <div class="type-stat-label">Reativados</div>
+          </div>
+          <div class="type-stat">
+            <div class="type-stat-value">70%</div>
+            <div class="type-stat-label">Taxa Retorno</div>
+          </div>
+        </div>
+        <div class="type-action">
+          <button class="btn-purple" id="create-reactivation-campaign">↻ Criar Campanha de Reativação</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="active-campaigns">
+      <div class="section-header">
+        <h2>Campanhas Ativas</h2>
+      </div>
+
+      <div class="campaigns-list">
+        <article class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-product">
+              <div class="product-thumb coral">ECO</div>
+              <div class="product-info">
+                <h4>Ecobag Leve - Desconto Flash</h4>
+                <span>Produto de baixo giro</span>
+              </div>
+            </div>
+            <span class="campaign-status active">Ativa</span>
+          </div>
+          <div class="campaign-metrics">
+            <div class="metric">
+              <div class="metric-value">3.2K</div>
+              <div class="metric-label">Alcance</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">67</div>
+              <div class="metric-label">Pedidos</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">15.7%</div>
+              <div class="metric-label">Conversão</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">R$ 2.4K</div>
+              <div class="metric-label">Faturamento</div>
+            </div>
+          </div>
+          <div class="campaign-progress">
+            <div class="progress-header">
+              <span>Meta: 100 unidades</span>
+              <span>67/100 (67%)</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill coral" style="width: 67%;"></div>
+            </div>
+          </div>
+          <div class="campaign-actions">
+            <button class="btn-outline">Pausar</button>
+            <button class="btn-lime">Ver Detalhes</button>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-product">
+              <div class="product-thumb purple">↻</div>
+              <div class="product-info">
+                <h4>Reativação SP - Cupom Exclusivo</h4>
+                <span>Clientes inativos há 90+ dias</span>
+              </div>
+            </div>
+            <span class="campaign-status active">Ativa</span>
+          </div>
+          <div class="campaign-metrics">
+            <div class="metric">
+              <div class="metric-value">127</div>
+              <div class="metric-label">Enviados</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">42</div>
+              <div class="metric-label">Retornos</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">33%</div>
+              <div class="metric-label">Taxa</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">R$ 4.8K</div>
+              <div class="metric-label">Faturamento</div>
+            </div>
+          </div>
+          <div class="campaign-progress">
+            <div class="progress-header">
+              <span>Meta: 50 clientes reativados</span>
+              <span>42/50 (84%)</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill purple" style="width: 84%;"></div>
+            </div>
+          </div>
+          <div class="campaign-actions">
+            <button class="btn-outline">Pausar</button>
+            <button class="btn-lime">Ver Detalhes</button>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-product">
+              <div class="product-thumb lime">SOL</div>
+              <div class="product-info">
+                <h4>Camiseta Solar - Lançamento</h4>
+                <span>Novo produto</span>
+              </div>
+            </div>
+            <span class="campaign-status active">Ativa</span>
+          </div>
+          <div class="campaign-metrics">
+            <div class="metric">
+              <div class="metric-value">8.7K</div>
+              <div class="metric-label">Alcance</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">89</div>
+              <div class="metric-label">Pedidos</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">7.9%</div>
+              <div class="metric-label">Conversão</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">R$ 7K</div>
+              <div class="metric-label">Faturamento</div>
+            </div>
+          </div>
+          <div class="campaign-progress">
+            <div class="progress-header">
+              <span>Meta: 150 unidades</span>
+              <span>89/150 (59%)</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill lime" style="width: 59%;"></div>
+            </div>
+          </div>
+          <div class="campaign-actions">
+            <button class="btn-outline">Pausar</button>
+            <button class="btn-lime">Ver Detalhes</button>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <div class="campaign-header">
+            <div class="campaign-product">
+              <div class="product-thumb blue">NUV</div>
+              <div class="product-info">
+                <h4>Moletom Nuvem - 20% OFF</h4>
+                <span>Produto de baixo giro</span>
+              </div>
+            </div>
+            <span class="campaign-status paused">Pausada</span>
+          </div>
+          <div class="campaign-metrics">
+            <div class="metric">
+              <div class="metric-value">1.4K</div>
+              <div class="metric-label">Alcance</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">18</div>
+              <div class="metric-label">Pedidos</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">5.2%</div>
+              <div class="metric-label">Conversão</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">R$ 2.2K</div>
+              <div class="metric-label">Faturamento</div>
+            </div>
+          </div>
+          <div class="campaign-progress">
+            <div class="progress-header">
+              <span>Meta: 80 unidades</span>
+              <span>18/80 (22%)</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 22%; background: var(--blue);"></div>
+            </div>
+          </div>
+          <div class="campaign-actions">
+            <button class="btn-lime">Retomar</button>
+            <button class="btn-outline">Ver Detalhes</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="tip">
+      <div>
+        <span class="tip-icon">✦</span>
+        <div>
+          <strong>Dica da D+</strong>
+          <p>Campanhas de reativação têm custo por cliente 60% menor que aquisição. A IA identificou 127 clientes inativos prontos para campanha.</p>
+        </div>
+      </div>
+      <button id="ai-optimize-btn">✦ Otimizar com IA</button>
+    </aside>
+  </main>
+
+  <!-- Modal Nova Campanha -->
+  <div class="modal-overlay" id="campaign-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Nova Campanha</h2>
+        <button class="modal-close" aria-label="Fechar">×</button>
+      </div>
+      <form id="campaign-form">
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label for="campaign-type">Tipo de Campanha</label>
+            <select id="campaign-type" name="type" required>
+              <option value="">Selecione...</option>
+              <option value="stock">Produto de Baixo Giro</option>
+              <option value="reactivation">Reativação de Clientes</option>
+              <option value="launch">Lançamento de Produto</option>
+              <option value="seasonal">Promoção Sazonal</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label for="campaign-name">Nome da Campanha</label>
+            <input type="text" id="campaign-name" name="name" placeholder="Ex: Black Friday 2026" required>
+          </div>
+          <div class="form-group">
+            <label for="campaign-product">Produto (se aplicável)</label>
+            <select id="campaign-product" name="product">
+              <option value="">Selecione...</option>
+              <option value="camiseta-solar">Camiseta Solar - R$ 79</option>
+              <option value="ecobag-leve">Ecobag Leve - R$ 49</option>
+              <option value="bone-horizonte">Boné Horizonte - R$ 65</option>
+              <option value="moletom-nuvem">Moletom Nuvem - R$ 149</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="campaign-discount">Desconto (%)</label>
+            <input type="number" id="campaign-discount" name="discount" placeholder="Ex: 20" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label for="campaign-start">Data Início</label>
+            <input type="date" id="campaign-start" name="start" required>
+          </div>
+          <div class="form-group">
+            <label for="campaign-end">Data Fim</label>
+            <input type="date" id="campaign-end" name="end" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="campaign-description">Descrição da Oferta</label>
+            <textarea id="campaign-description" name="description" placeholder="Descreva a oferta para a IA criar o conteúdo..."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary">Cancelar</button>
+          <button type="submit" class="btn-lime">Criar Campanha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Divulga+</strong>
+    <span>• Gestão inteligente e simplificada</span>
+    <small>© 2026 Divulga+. Todos os direitos reservados.</small>
+  </footer>
+
+  <script src="/assets/js/campanhas.js"></script>
+</body>
+</html>
