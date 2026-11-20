@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes &amp; Planilhas — Divulga+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/clientes.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-wrap"><a class="brand" href="/index.html">Divulga+</a><span>PAINEL DE<br>CONTROLE</span></div>
+      <nav class="main-tabs" aria-label="Navegação do painel">
+        <a class="active" href="/pages/painel/clientes.html">Clientes &amp; Planilhas</a><a href="/pages/painel/agenda.html">Agenda de Posts</a><a href="/pages/painel/relatorios.html">Relatórios Detalhados</a><a href="/pages/catalog/catalog.html">Meu catálogo</a><a href="/pages/painel/chat.html">Agente de IA</a>
+      </nav>
+      <div class="top-actions"><button class="new-post">＋ Novo post</button><button class="bell" aria-label="Notificações">●</button><span class="avatar">m</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="heading-row">
+        <div class="heading-copy">
+          <p class="kicker">▦ GERENCIAMENTO DE CLIENTES</p>
+          <h1>Planilhas &amp; Clientes</h1>
+          <p class="subtitle">Importe dados, monitore sincronização de lojas e dispare a geração de<br>relatórios estratégicos com a IA da D+.</p>
+        </div>
+        <div class="heading-actions"><button class="sync-all">↻ Sincronizar Todas</button><button class="import">＋ Importar Planilha</button></div>
+      </div>
+
+      <section class="stats" aria-label="Resumo">
+        <article class="stat coral"><header><span>CLIENTES TOTAIS</span><b>⌁</b></header><strong>24</strong><p>5 adicionados este mês</p></article>
+        <article class="stat lime"><header><span>PLANILHAS CONECTADAS</span><b>▦</b></header><strong>18 ativas</strong><p>99.4% integradas com sucesso</p></article>
+        <article class="stat mint"><header><span>RELATÓRIOS PENDENTES</span><b>▣</b></header><strong>3 prontos</strong><p>Disparo de IA sugerido hoje</p></article>
+        <article class="stat stone"><header><span>ENGAJAMENTO MÉDIO</span><b>↗</b></header><strong>+42.8%</strong><p>Comparado à média do setor</p></article>
+      </section>
+
+      <section class="table-card">
+        <div class="toolbar">
+          <label class="search">⌕ <input id="client-search" type="search" placeholder="Buscar cliente, nicho, arquivo..."></label>
+          <div class="filters" aria-label="Filtros"><button class="selected" data-filter="todos">Todos (24)</button><button data-filter="moda">Moda &amp; Vestuário</button><button data-filter="gastronomia">Gastronomia</button><button data-filter="beleza">Beleza &amp; Estética</button><button data-filter="servicos">Serviços</button></div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>CLIENTE &amp; LOJA</th><th>PLANILHA VINCULADA</th><th>ÚLTIMA ATUALIZAÇÃO</th><th>PERFORMANCE</th><th>AÇÕES</th></tr></thead>
+            <tbody id="client-rows">
+              <tr data-category="moda"><td><div class="client"><span class="avatar aa">AA</span><div><strong>Alto Astral Moda</strong><small>Moda &amp; Vestuário • São Paulo, SP</small></div></div></td><td><div class="file green">▦ estoque_vendas_out24.xlsx</div><small>124 produtos • 8 colunas</small></td><td><div class="status"><b class="dot"></b><strong>Sincronizado há 20 min</strong></div><small>Atualização automática</small></td><td><div class="performance"><div><strong>94%</strong><span class="up">+18.2%</span></div><div class="bar"><i style="width:94%"></i></div></div></td><td><div class="row-actions"><button class="generate">✦ Gerar<br>Relatório IA</button><button class="icon">↻</button><button class="icon">•••</button></div></td></tr>
+              <tr data-category="decoracao"><td><div class="client"><span class="avatar cb">CB</span><div><strong>Casa Botânica Design</strong><small>Decoração • Curitiba, PR</small></div></div></td><td><div class="file red">▣ catalogo_produtos_v3.csv</div><small>48 itens • Loja Integrada</small></td><td><div class="status"><b class="dot"></b><strong>Sincronizado ontem</strong></div><small>Manual (Google Sheets)</small></td><td><div class="performance redbar"><div><strong>76%</strong><span>+6.4%</span></div><div class="bar"><i style="width:76%"></i></div></div></td><td><div class="row-actions"><button class="generate pale">✦ Gerar<br>Relatório IA</button><button class="icon">↻</button><button class="icon">•••</button></div></td></tr>
+              <tr data-category="gastronomia"><td><div class="client"><span class="avatar cg">CG</span><div><strong>Café &amp; Grão Torrefação</strong><small>Gastronomia • Belo Horizonte, MG</small></div></div></td><td><div class="file green">▦ pedidos_assinaturas_q4.xlsx</div><small>310 assinantes • Nuvemshop</small></td><td><div class="status"><b class="dot"></b><strong>Sincronizado há 2h</strong></div><small>Webhook ativo</small></td><td><div class="performance"><div><strong>88%</strong><span class="up">+24.0%</span></div><div class="bar"><i style="width:88%"></i></div></div></td><td><div class="row-actions"><button class="generate">✦ Gerar<br>Relatório IA</button><button class="icon">↻</button><button class="icon">•••</button></div></td></tr>
+              <tr data-category="beleza"><td><div class="client"><span class="avatar sb">SB</span><div><strong>Studio Bella Cosméticos</strong><small>Beleza • Rio de Janeiro, RJ</small></div></div></td><td><div class="file error">▣ tabela_precos_nov24.csv</div><small>2 campos pendentes</small></td><td><div class="status error-status"><b></b><strong>Erro de Mapeamento</strong></div><small>Tentativa há 3 dias</small></td><td><div class="performance redbar"><div><strong>32%</strong><span>-4.2%</span></div><div class="bar"><i style="width:32%"></i></div></div></td><td><div class="row-actions"><button class="fix">Corrigir Colunas</button><button class="icon">↻</button></div></td></tr>
+              <tr data-category="moda"><td><div class="client"><span class="avatar uf">UF</span><div><strong>Urban Fit Wear</strong><small>Moda Fitness • Florianópolis, SC</small></div></div></td><td><div class="file green">▦ performance_ads_nov.xlsx</div><small>86 campanhas rastreadas</small></td><td><div class="status"><b class="dot"></b><strong>Sincronizado há 10 min</strong></div><small>Meta Ads + Shopify</small></td><td><div class="performance"><div><strong>97%</strong><span class="up">+31.5%</span></div><div class="bar"><i style="width:97%"></i></div></div></td><td><div class="row-actions"><button class="generate">✦ Gerar<br>Relatório IA</button><button class="icon">↻</button><button class="icon">•••</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="tip"><div><span class="tip-icon">✦</span><div><strong>Dica da D+</strong><p>Você pode gerar um <b>relatório consolidado com 1 clique</b> para todos os clientes com dados sincronizados nesta semana.</p></div></div><button>▣ Gerar Lote com IA</button></aside>
+      </section>
+    </section>
+  </main>
+
+  <footer><strong>Divulga+</strong><span>• Gestão inteligente e simplificada</span><small>© 2026 Divulga+. Todos os direitos reservados.</small></footer>
+  <script src="/assets/js/clientes.js"></script>
+</body>
+</html>

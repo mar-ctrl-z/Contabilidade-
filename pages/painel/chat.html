@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente de IA — Divulga+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css"><link rel="stylesheet" href="/assets/css/chat.css">
+</head>
+<body class="chat-page">
+  <header class="chat-header">
+    <div class="chat-nav">
+      <div class="chat-brand-wrap"><a class="chat-brand" href="/index.html">Divulga+</a><span>PAINEL DE<br>CONTROLE</span></div>
+      <nav class="chat-tabs" aria-label="Navegação do painel"><a href="/pages/painel/clientes.html">Clientes &amp; Planilhas</a><a href="/pages/painel/agenda.html">Agenda de Posts</a><a href="/pages/painel/relatorios.html">Relatórios Detalhados</a><a href="/pages/catalog/catalog.html">Meu catálogo</a><a class="active" href="/pages/painel/chat.html">Agente de IA</a></nav>
+      <div class="chat-actions"><button type="button">＋ Novo post</button><span class="chat-avatar">M</span></div>
+    </div>
+  </header>
+
+  <main class="chat-layout">
+    <aside class="chat-sidebar">
+      <div class="sidebar-mark">✦</div>
+      <h1>Vamos criar<br>algo legal?</h1>
+      <p>Peça conteúdo, aprenda a ler seus resultados ou envie uma imagem para análise.</p>
+      <small>PERGUNTE PARA A D+</small>
+      <nav class="side-actions" aria-label="Sugestões">
+        <button type="button" data-prompt="Criar um post">✦ &nbsp; Criar um post</button>
+        <button type="button" data-prompt="Montar uma oferta">% &nbsp; Montar uma oferta</button>
+        <button type="button" data-prompt="Planejar calendário">▦ &nbsp; Planejar calendário</button>
+        <button type="button" data-prompt="Como usar Insights?">◉ &nbsp; Entender Insights</button>
+        <button type="button" data-prompt="Dica de tráfego pago">↗ &nbsp; Dica de tráfego pago</button>
+        <button class="lime-action" type="button" data-prompt="Analisar uma imagem">＋ &nbsp; Analisar uma imagem</button>
+      </nav>
+      <a class="catalog-status" href="/pages/catalog/catalog.html"><small>CATÁLOGO CONECTADO</small><strong>4 produtos disponíveis</strong><span>Gerenciar catálogo →</span></a>
+    </aside>
+
+    <section class="chat-window">
+      <header class="chat-window-header"><div class="agent-mark">✦</div><div><strong>D+ Agente de IA</strong><span>● Online e cheia de ideias</span></div></header>
+      <div class="chat-content" id="chat-content">
+        <div class="bot-message" id="welcome-message">O que você quer fazer hoje? Posso criar, ensinar ou analisar algo com você.</div>
+        <div class="chat-options">
+          <strong>Escolha uma pergunta para começar</strong>
+          <div class="option-grid">
+            <button class="option coral" type="button" data-prompt="Criar um post">✦ &nbsp; Criar um post</button>
+            <button class="option lime" type="button" data-prompt="Montar uma oferta">% &nbsp; Montar uma oferta</button>
+            <button class="option purple" type="button" data-prompt="Planejar calendário">▦ &nbsp; Planejar calendário</button>
+            <button class="option lav" type="button" data-prompt="Como usar Insights?">◉ &nbsp; Como usar Insights?</button>
+            <button class="option blue" type="button" data-prompt="Dica de tráfego pago">↗ &nbsp; Dica de tráfego pago</button>
+            <button class="option dark" type="button" data-prompt="Analisar uma imagem">＋ &nbsp; Analisar uma imagem</button>
+          </div>
+        </div>
+        <div class="chat-tip">Dica: você também pode escrever do seu jeito. A D+ faz perguntas curtas até entender o que você precisa.</div>
+        <div class="messages" id="messages"></div>
+      </div>
+      <form class="chat-composer" id="chat-form"><input id="chat-input" type="text" autocomplete="off" placeholder="Peça uma ideia, post ou legenda..." aria-label="Mensagem para a D+"><button class="attach" type="button" aria-label="Adicionar imagem">＋</button><button class="send" type="submit" aria-label="Enviar">→</button></form>
+    </section>
+  </main>
+  <script src="/assets/js/chat.js"></script>
+</body>
+</html>

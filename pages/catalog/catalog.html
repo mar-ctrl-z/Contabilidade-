@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu catálogo — Divulga+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css"><link rel="stylesheet" href="/assets/css/catalog.css">
+</head>
+<body class="catalog-page">
+  <header class="catalog-header">
+    <div class="catalog-nav">
+      <div class="catalog-brand-wrap"><a class="catalog-brand" href="/index.html">Divulga+</a><span>PAINEL DE<br>CONTROLE</span></div>
+      <nav class="catalog-tabs" aria-label="Navegação do painel">
+        <a href="/pages/painel/clientes.html">Clientes &amp; Planilhas</a>
+        <a href="/pages/painel/agenda.html">Agenda de Posts</a>
+        <a href="/pages/painel/relatorios.html">Relatórios Detalhados</a>
+        <a class="active" href="/pages/catalog/catalog.html">Meu catálogo</a>
+        <a href="/pages/painel/chat.html">Agente de IA</a>
+      </nav>
+      <a class="back-button" href="/index.html">‹ &nbsp; Voltar ao site</a>
+    </div>
+  </header>
+
+  <main class="catalog-app">
+    <section class="catalog-heading">
+      <div><div class="catalog-eyebrow">▦ &nbsp; SUA VITRINE DIGITAL</div><h1>Meu catálogo</h1><p>Organize os produtos que a D+ usa nas suas divulgações.</p></div>
+      <div class="catalog-actions"><a class="view-store" href="/pages/catalog/vitrine.html">◉ &nbsp; Ver vitrine</a><button class="new-product" id="new-product" type="button">＋ &nbsp; Novo produto</button></div>
+    </section>
+
+    <section class="catalog-board">
+      <div class="board-toolbar"><div class="product-count"><strong id="product-count">4</strong><span>produtos cadastrados</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Buscar produto..."></label></div>
+      <div class="products-board" id="products-board">
+        <article class="catalog-product" data-name="Camiseta Solar">
+          <div class="catalog-product-image coral"><div class="product-monogram">SOL</div><button class="delete-product" type="button" aria-label="Excluir Camiseta Solar">×</button></div>
+          <div class="catalog-product-info"><small>CAMISETAS</small><h2>Camiseta Solar</h2><strong>R$ 79,00</strong></div>
+        </article>
+        <article class="catalog-product" data-name="Ecobag Leve">
+          <div class="catalog-product-image lime"><div class="product-monogram">LEVE</div><button class="delete-product" type="button" aria-label="Excluir Ecobag Leve">×</button></div>
+          <div class="catalog-product-info"><small>ACESSÓRIOS</small><h2>Ecobag Leve</h2><strong>R$ 49,00</strong></div>
+        </article>
+        <article class="catalog-product" data-name="Boné Horizonte">
+          <div class="catalog-product-image purple"><div class="product-monogram">ALTO</div><button class="delete-product" type="button" aria-label="Excluir Boné Horizonte">×</button></div>
+          <div class="catalog-product-info"><small>ACESSÓRIOS</small><h2>Boné Horizonte</h2><strong>R$ 65,00</strong></div>
+        </article>
+        <article class="catalog-product" data-name="Moletom Nuvem">
+          <div class="catalog-product-image blue"><div class="product-monogram">PAZ</div><button class="delete-product" type="button" aria-label="Excluir Moletom Nuvem">×</button></div>
+          <div class="catalog-product-info"><small>MOLETONS</small><h2>Moletom Nuvem</h2><strong>R$ 149,00</strong></div>
+        </article>
+      </div>
+      <div class="catalog-tip"><span>✦</span><p>Dica da D+: seu catálogo já está pronto para virar conteúdo. Vá para o Agente de IA e peça uma divulgação.</p></div>
+    </section>
+  </main>
+
+  <dialog id="product-dialog">
+    <form method="dialog" id="product-form">
+      <button class="dialog-close" type="button" aria-label="Fechar">×</button>
+      <small class="dialog-kicker">NOVO NA VITRINE</small>
+      <h2>Adicionar produto</h2>
+      <div class="form-grid">
+        <label class="field-full">Nome do produto<input name="name" required placeholder="Ex: Camiseta Aurora"></label>
+        <label>Preço<input name="price" required inputmode="decimal" placeholder="89,00"></label>
+        <label>Categoria<input name="category" required placeholder="Camisetas"></label>
+      </div>
+      <div class="product-tip">Dica da D+: use um nome curto e fácil de lembrar. Você poderá adicionar fotos depois.</div>
+      <input type="hidden" name="color" value="coral">
+      <button class="dialog-save" type="submit">＋ &nbsp; Adicionar ao catálogo</button>
+      <p class="dialog-note">Este formulário é uma camada independente para facilitar a edição.</p>
+    </form>
+  </dialog>
+  <script src="/assets/js/catalog.js"></script>
+</body>
+</html>
