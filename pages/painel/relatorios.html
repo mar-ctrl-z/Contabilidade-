@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/relatorios.css">
+<link rel="stylesheet" href="/assets/css/painel-extra.css">
 </head>
 <body>
   <header class="topbar">
@@ -270,7 +271,14 @@
       </div>
       <button>✦ Ver análise completa</button>
     </aside>
-  </main>
+  <section class="x-card" id="dados">
+<div class="x-head"><div><h2>Registrar resultados</h2><p>Lance os números de cada dia e origem. Os cartões lá em cima passam a mostrar a soma dos seus dados.</p></div>
+<div class="x-btns"><input type="file" id="met-file" accept=".csv,text/csv" hidden><button class="x-btn" id="met-import" type="button">Importar CSV</button><button class="x-btn" id="met-template" type="button">Baixar modelo</button><button class="x-btn main" id="met-export" type="button">Exportar CSV</button></div></div>
+<form class="x-form" id="met-form"><label>Data<input type="date" name="data" required></label><label>Origem<select name="origem"><option>Instagram</option><option>WhatsApp</option><option>Facebook</option><option>Catálogo</option><option>Outro</option></select></label><label>Alcance<input name="alcance" inputmode="numeric" required></label><label>Pedidos<input name="pedidos" inputmode="numeric" required></label><label>Faturamento (R$)<input name="fat" inputmode="decimal" required></label><label>Investimento (R$)<input name="inv" inputmode="decimal" value="0"></label><button class="x-btn main" type="submit">＋ Registrar</button></form>
+<div class="x-bars" id="met-bars" aria-label="Alcance por registro"></div>
+<div class="x-wrap"><table class="x-table"><thead><tr><th>Data</th><th>Origem</th><th>Alcance</th><th>Pedidos</th><th>Faturamento</th><th>Investimento</th><th></th></tr></thead><tbody id="met-rows"></tbody></table></div>
+</section>
+</main>
 
   <footer>
     <strong>Divulga+</strong>
@@ -279,5 +287,6 @@
   </footer>
 
   <script src="/assets/js/relatorios.js"></script>
+<script src="/assets/js/store.js"></script><script src="/assets/js/relatorios-dados.js"></script>
 </body>
 </html>

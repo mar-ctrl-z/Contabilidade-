@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/clientes.css">
+<link rel="stylesheet" href="/assets/css/painel-extra.css">
 </head>
 <body>
   <header class="topbar">
@@ -58,10 +59,18 @@
 
         <aside class="tip"><div><span class="tip-icon">✦</span><div><strong>Dica da D+</strong><p>Você pode gerar um <b>relatório consolidado com 1 clique</b> para todos os clientes com dados sincronizados nesta semana.</p></div></div><button>▣ Gerar Lote com IA</button></aside>
       </section>
-    </section>
+    <section class="x-card" id="sheet">
+<div class="x-head"><div><h2>Minha planilha de clientes</h2><p>Importe um CSV (no Excel: Arquivo → Salvar como → CSV) com as colunas nome, telefone, cidade, total_gasto e compras, ou cadastre aqui.</p></div>
+<div class="x-btns"><input type="file" id="sheet-file" accept=".csv,text/csv" hidden><button class="x-btn main" id="sheet-import" type="button">Importar planilha</button><button class="x-btn" id="sheet-template" type="button">Baixar modelo</button><button class="x-btn" id="sheet-export" type="button">Exportar CSV</button><button class="x-btn" id="sheet-report-dl" type="button">Baixar relatório</button></div></div>
+<form class="x-form" id="client-form"><label>Nome<input name="nome" required></label><label>Telefone<input name="tel"></label><label>Cidade<input name="cidade"></label><label>Compras<input name="compras" inputmode="numeric" value="1"></label><label>Total gasto (R$)<input name="gasto" inputmode="decimal" placeholder="0,00"></label><button class="x-btn main" type="submit">＋ Adicionar</button></form>
+<div id="sheet-report"></div>
+<div class="x-wrap"><table class="x-table"><thead><tr><th>Nome</th><th>Telefone</th><th>Cidade</th><th>Compras</th><th>Total gasto</th><th></th></tr></thead><tbody id="sheet-rows"></tbody></table></div>
+</section>
+</section>
   </main>
 
   <footer><strong>Divulga+</strong><span>• Gestão inteligente e simplificada</span><small>© 2026 Divulga+. Todos os direitos reservados.</small></footer>
   <script src="/assets/js/clientes.js"></script>
+<script src="/assets/js/store.js"></script><script src="/assets/js/clientes-planilha.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 - `assets/css/` — folhas de estilo
 - `assets/js/` — JavaScript
 - `assets/images/` — imagens futuras
-- `pages/catalog/` — catálogo e vitrine
+- `pages/catalog/` — catálogo de produtos
 - `pages/painel/` — chat, clientes, agenda e relatórios
 - `server/` — backend futuro
 - `api/v1/` — rotas da API futura
@@ -14,7 +14,6 @@
 
 - `/index.html`
 - `/pages/catalog/catalog.html`
-- `/pages/catalog/vitrine.html`
 - `/pages/painel/chat.html`
 - `/pages/painel/clientes.html`
 - `/pages/painel/agenda.html`

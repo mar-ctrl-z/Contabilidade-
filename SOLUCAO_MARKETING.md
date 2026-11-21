@@ -10,8 +10,6 @@ O **Divulga+** é um agente de IA de marketing com catálogo digital que resolve
 
 #### 1. Catálogo Digital de Produtos (`/pages/catalog/`)
 - **catalog.html**: Gerenciamento de produtos com adição, edição e exclusão
-- **vitrine.html**: Vitrine pública para compartilhar com clientes
-- **Integração WhatsApp**: Botões de pedido direto via WhatsApp Business
 - **Responsivo**: Funciona perfeitamente em desktop e mobile
 
 #### 2. Agenda de Posts com IA (`/pages/painel/agenda.html`)
@@ -62,7 +60,6 @@ Contabilidade/
 │   ├── css/
 │   │   ├── styles.css           # Estilos globais
 │   │   ├── catalog.css          # Catálogo de produtos
-│   │   ├── vitrine.css          # Vitrine pública
 │   │   ├── crm.css              # CRM de clientes
 │   │   ├── agenda-layout.css    # Agenda de posts
 │   │   ├── campanhas.css        # Campanhas automáticas
@@ -72,15 +69,13 @@ Contabilidade/
 │   └── js/
 │       ├── routes.js            # Rotas do sistema
 │       ├── catalog.js           # Lógica do catálogo
-│       ├── vitrine.js           # Lógica da vitrine
 │       ├── crm.js               # Lógica do CRM
 │       ├── agenda.js            # Lógica da agenda
 │       ├── campanhas.js         # Lógica das campanhas
 │       └── relatorios.js        # Lógica dos relatórios
 └── pages/
     ├── catalog/
-    │   ├── catalog.html         # Gerenciar produtos
-    │   └── vitrine.html         # Vitrine pública
+    │   └── catalog.html         # Gerenciar produtos
     └── painel/
         ├── crm.html             # CRM de clientes
         ├── agenda.html          # Agenda de posts

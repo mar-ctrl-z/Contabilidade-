@@ -13,7 +13,7 @@
     <div class="chat-nav">
       <div class="chat-brand-wrap"><a class="chat-brand" href="/index.html">Divulga+</a><span>PAINEL DE<br>CONTROLE</span></div>
       <nav class="chat-tabs" aria-label="Navegação do painel"><a href="/pages/painel/clientes.html">Clientes &amp; Planilhas</a><a href="/pages/painel/agenda.html">Agenda de Posts</a><a href="/pages/painel/relatorios.html">Relatórios Detalhados</a><a href="/pages/catalog/catalog.html">Meu catálogo</a><a class="active" href="/pages/painel/chat.html">Agente de IA</a></nav>
-      <div class="chat-actions"><button type="button">＋ Novo post</button><span class="chat-avatar">M</span></div>
+      <div class="chat-actions"><a class="chat-back" href="/index.html">‹ &nbsp; Voltar ao site</a><button type="button">＋ Novo post</button><span class="chat-avatar">M</span></div>
     </div>
   </header>
 
@@ -52,7 +52,7 @@
         <div class="chat-tip">Dica: você também pode escrever do seu jeito. A D+ faz perguntas curtas até entender o que você precisa.</div>
         <div class="messages" id="messages"></div>
       </div>
-      <form class="chat-composer" id="chat-form"><input id="chat-input" type="text" autocomplete="off" placeholder="Peça uma ideia, post ou legenda..." aria-label="Mensagem para a D+"><button class="attach" type="button" aria-label="Adicionar imagem">＋</button><button class="send" type="submit" aria-label="Enviar">→</button></form>
+      <form class="chat-composer" id="chat-form"><input id="chat-input" type="text" autocomplete="off" placeholder="Peça uma ideia, post ou legenda..." aria-label="Mensagem para a D+"><input type="file" id="chat-file" accept="image/*" hidden><button class="attach" type="button" aria-label="Enviar imagem para análise">＋</button><button class="send" type="submit" aria-label="Enviar">→</button></form>
     </section>
   </main>
   <script src="/assets/js/chat.js"></script>
